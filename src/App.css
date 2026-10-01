@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    background: #111111;
+    color: #eeeeee;
+    font-family: monospace;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: normal;
+}
