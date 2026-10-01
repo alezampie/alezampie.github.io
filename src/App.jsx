@@ -1,22 +1,44 @@
 import './App.css'
+import { useState } from 'react'
+
+import Intro from './components/Intro'
+import SectionMenu from './components/SectionMenu'
+
 
 function App() {
-    const name = 'Alessio'
-    const role = 'Programmer / Musician / Creative Technologist'
 
-    const sections = ['THE NERD', 'THE CREATIVE', 'THE MUSICIAN', 'THE PLANT GUY']
+    const sections = [
+        'PROGRAMMER',
+        'CREATIVE CODE DIY',
+        'BOTANIST',
+        'MUSICIAN'
+    ]
+
+    const [selectedSection, setSelectedSection] = useState(null)
+
+    function handleSectionClick(section) {
+        setSelectedSection(section)
+    }
 
     return (
-        <>
-            <h1>Hi, I'm {name}.</h1>
-            <p>{role}</p>
+        <main className="home">
 
-            <ul>
-                {sections.map((section) => (
-                    <li key={section}>{section}</li>
-                ))}
-            </ul>
-        </>
+            <section className="intro">
+                <Intro />
+            </section>
+
+            <section className="menu">
+                <SectionMenu
+                    sections={sections}
+                    onSectionClick={handleSectionClick}
+                />
+            </section>
+
+            {selectedSection && (
+                <p>You found: {selectedSection}</p>
+            )}
+
+        </main>
     )
 }
 
