@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Intro from './components/Intro'
 import SectionMenu from './components/SectionMenu'
 import Programmer from './components/Programmer'
+import MousePet from './components/MousePet'
 
 
 function App() {
@@ -78,6 +79,8 @@ function App() {
                     <Programmer />
                 </div>
             )}
+
+            <MousePet />
         </>
     )
 }

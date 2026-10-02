@@ -340,6 +340,29 @@ body {
     cursor: pointer;
 }
 
+/* MOUSE PET */
+
+.mouse-pet {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 9999;
+    cursor: pointer;
+}
+
+    .mouse-pet img {
+        display: block;
+        width: 80px;
+        height: auto;
+    }
+
+    .mouse-phrase {
+        position: absolute;
+        left: 0;
+        bottom: 100%;
+        margin-bottom: 10px;
+        white-space: nowrap;
+    }
 
 /* MOBILE */
 
@@ -385,7 +408,7 @@ body {
     }
 
     .project-card {
-        flex: 0 0 clamp(240px, 70vw, 320px);
+        flex: 0 0 clamp(205px, 55vw, 270px);
         height: auto;
         grid-template-columns: 1fr;
     }
