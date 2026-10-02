@@ -6,6 +6,7 @@ import SectionMenu from './components/SectionMenu'
 import Programmer from './components/Programmer'
 import MousePet from './components/MousePet'
 import CreativeCode from './components/CreativeCode'
+import Botanist from './components/Botanist'
 
 
 function App() {
@@ -83,6 +84,10 @@ function App() {
 
             {selectedSection === 'CREATIVE CODE DIY' && (
                 <CreativeCode />
+            )}
+
+            {selectedSection === 'BOTANIST' && (
+                <Botanist />
             )}
 
             <MousePet />
