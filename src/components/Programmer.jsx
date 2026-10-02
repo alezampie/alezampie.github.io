@@ -2,7 +2,10 @@
 
 function Programmer() {
     return (
-        <section className="programmer">
+        <section
+            id="programmer"
+            className="programmer"
+        >
 
             <div className="programmer-intro">
 

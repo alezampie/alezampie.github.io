@@ -5,6 +5,7 @@ import Intro from './components/Intro'
 import SectionMenu from './components/SectionMenu'
 import Programmer from './components/Programmer'
 import MousePet from './components/MousePet'
+import CreativeCode from './components/CreativeCode'
 
 
 function App() {
@@ -24,39 +25,39 @@ function App() {
     }
 
     useEffect(() => {
-        if (selectedSection === 'PROGRAMMER') {
-            const target = programmerRef.current
 
-            if (!target) {
-                return
+        if (!selectedSection) return
+
+        const target = document.getElementById(
+            selectedSection.toLowerCase().replaceAll(' ', '-')
+        )
+
+        if (!target) return
+
+        const start = window.scrollY
+        const end = target.getBoundingClientRect().top + window.scrollY
+        const distance = end - start
+        const duration = 1400
+        const startTime = performance.now()
+
+        function animateScroll(currentTime) {
+
+            const elapsed = currentTime - startTime
+            const progress = Math.min(elapsed / duration, 1)
+            const easedProgress = 1 - Math.pow(1 - progress, 3)
+
+            window.scrollTo(
+                0,
+                start + distance * easedProgress
+            )
+
+            if (progress < 1) {
+                requestAnimationFrame(animateScroll)
             }
-
-            const start = window.scrollY
-            const end = target.getBoundingClientRect().top + window.scrollY
-            const distance = end - start
-
-            const duration = 1400
-            const startTime = performance.now()
-
-            function animateScroll(currentTime) {
-                const elapsed = currentTime - startTime
-                const progress = Math.min(elapsed / duration, 1)
-
-                const easedProgress =
-                    1 - Math.pow(1 - progress, 3)
-
-                window.scrollTo(
-                    0,
-                    start + distance * easedProgress
-                )
-
-                if (progress < 1) {
-                    requestAnimationFrame(animateScroll)
-                }
-            }
-
-            requestAnimationFrame(animateScroll)
         }
+
+        requestAnimationFrame(animateScroll)
+
     }, [selectedSection])
 
     return (
@@ -78,6 +79,10 @@ function App() {
                 <div ref={programmerRef}>
                     <Programmer />
                 </div>
+            )}
+
+            {selectedSection === 'CREATIVE CODE DIY' && (
+                <CreativeCode />
             )}
 
             <MousePet />

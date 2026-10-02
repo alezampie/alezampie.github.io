@@ -3,6 +3,12 @@
     src: url('/fonts/basis33.ttf') format('truetype');
 }
 
+:root {
+    color-scheme: dark;
+    --background: #111;
+    --foreground: #fff;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -13,12 +19,27 @@ body,
     margin: 0;
     width: 100%;
     min-height: 100%;
+    background-color: var(--background);
+    color: var(--foreground);
 }
 
 body {
+    min-width: 320px;
     font-family: 'Basis33', monospace;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+button,
+a {
+    color: var(--foreground);
+}
 
 /* HOME */
 
@@ -176,8 +197,8 @@ body {
 
 .programmer {
     width: 100%;
-    min-height: 100svh;
-    padding: 8vh 5vw;
+    height: 100svh;
+    padding: 10vh 5vw;
     font-family: 'Basis33', monospace;
 }
 
@@ -198,6 +219,7 @@ body {
     margin-top: 2rem;
     font-size: clamp(1rem, 1.5vw, 1.5rem);
     line-height: 1.4;
+    text-align: center;
 }
 
 
@@ -340,6 +362,7 @@ body {
     cursor: pointer;
 }
 
+
 /* MOUSE PET */
 
 .mouse-pet {
@@ -356,13 +379,84 @@ body {
         height: auto;
     }
 
-    .mouse-phrase {
-        position: absolute;
-        left: 0;
-        bottom: 100%;
-        margin-bottom: 10px;
-        white-space: nowrap;
+.mouse-phrase {
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+
+/* CREATIVE CODE */
+
+.creative-code {
+    width: 100%;
+    min-height: 100svh;
+    padding: 8vh 5vw;
+    font-family: 'Basis33', monospace;
+}
+
+.creative-code-intro {
+    max-width: 700px;
+    margin: 0 auto 3vh;
+    text-align: center;
+}
+
+.creative-code h2 {
+    margin: 0;
+    font-family: 'Basis33', monospace;
+    font-size: clamp(3rem, 6vw, 7rem);
+    line-height: 0.9;
+}
+
+.creative-code-intro p {
+    margin-top: 2rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    line-height: 1.4;
+    text-align: center;
+}
+
+.creative-code-tool {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.creative-code-upload {
+    border: 1px solid currentColor;
+    background: none;
+    color: inherit;
+    padding: 0.5rem 1rem;
+    font-family: 'Basis33', monospace;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+    .creative-code-upload:hover {
+        text-shadow: 0.7px 0 0 currentColor;
     }
+
+.creative-code-canvas {
+    display: block;
+    width: min(70vw, 600px);
+    height: auto;
+    margin-top: 1rem;
+    border: 1px solid currentColor;
+}
+
+
+/* LARGE SCREEN */
+
+@media (min-width: 1250px) {
+
+    .project-card {
+        flex: 0 0 650px;
+        height: 300px;
+    }
+}
+
 
 /* MOBILE */
 
