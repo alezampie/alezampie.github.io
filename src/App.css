@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Basis33';
     src: url('/fonts/basis33.ttf') format('truetype');
@@ -5,8 +6,8 @@
 
 :root {
     color-scheme: dark;
-    --background: #111;
-    --foreground: #fff;
+    --background: #2038C9;
+    --foreground: #F4F0E6;
 }
 
 * {
@@ -41,17 +42,12 @@ a {
     color: var(--foreground);
 }
 
-/* HOME */
-
 .home {
     width: 100%;
     min-height: 100svh;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-
-
-/* INTRO */
 
 .intro {
     padding: clamp(8vh, 10vh, 12vh) 5vw;
@@ -76,9 +72,6 @@ a {
         font-size: clamp(1rem, 1.5vw, 1.5rem);
         line-height: 1.4;
     }
-
-
-/* MENU */
 
 .menu {
     padding: clamp(8vh, 10vh, 12vh) 5vw;
@@ -117,9 +110,6 @@ a {
     font-family: 'Basis33', monospace;
 }
 
-
-/* MENU TITLE */
-
 .menu-title {
     display: flex;
     align-items: center;
@@ -135,9 +125,6 @@ a {
         background: currentColor;
         flex: 1;
     }
-
-
-/* MENU ITEMS */
 
 .menu-content ul {
     width: fit-content;
@@ -161,9 +148,6 @@ a {
     width: 1.5em;
     display: inline-block;
 }
-
-
-/* MENU HELP */
 
 .menu-help {
     width: 100%;
@@ -192,9 +176,6 @@ a {
         text-align: left;
     }
 
-
-/* PROGRAMMER */
-
 .programmer {
     width: 100%;
     height: 100svh;
@@ -221,9 +202,6 @@ a {
     line-height: 1.4;
     text-align: center;
 }
-
-
-/* CAROUSEL */
 
 .project-carousel {
     width: 100%;
@@ -252,9 +230,6 @@ a {
     border: 1px solid currentColor;
 }
 
-
-/* VIDEO */
-
 .project-video {
     min-width: 0;
     min-height: 0;
@@ -280,9 +255,6 @@ a {
         border: 0;
     }
 
-
-/* PROJECT INFO */
-
 .project-info {
     min-width: 0;
     min-height: 0;
@@ -291,9 +263,6 @@ a {
     grid-template-rows: auto auto 1fr auto;
     font-size: clamp(0.75rem, 1vw, 1rem);
 }
-
-
-/* TITLE */
 
 .project-title {
     min-width: 0;
@@ -306,9 +275,6 @@ a {
         text-shadow: 0.7px 0 0 currentColor;
     }
 
-
-/* GITHUB */
-
 .project-github {
     min-width: 0;
     align-self: start;
@@ -318,9 +284,6 @@ a {
         color: inherit;
         text-align: left;
     }
-
-
-/* DESCRIPTION */
 
 .project-description {
     min-width: 0;
@@ -335,9 +298,6 @@ a {
         line-height: 1.3;
     }
 
-
-/* TECHNOLOGIES */
-
 .project-technologies {
     min-width: 0;
     align-self: end;
@@ -349,9 +309,6 @@ a {
         text-shadow: 0.7px 0 0 currentColor;
     }
 
-
-/* CAROUSEL BUTTONS */
-
 .carousel-button {
     flex: 0 0 auto;
     border: none;
@@ -361,9 +318,6 @@ a {
     font-size: 2rem;
     cursor: pointer;
 }
-
-
-/* MOUSE PET */
 
 .mouse-pet {
     position: fixed;
@@ -386,9 +340,6 @@ a {
     margin-bottom: 10px;
     white-space: nowrap;
 }
-
-
-/* CREATIVE CODE */
 
 .creative-code {
     width: 100%;
@@ -446,8 +397,6 @@ a {
     border: 1px solid currentColor;
 }
 
-/* BOTANIST */
-
 .botanist {
     width: 100%;
     min-height: 100svh;
@@ -488,9 +437,6 @@ a {
             margin-bottom: 0;
         }
 
-
-/* CAROUSEL */
-
 .botanist-carousel {
     width: min(100%, 380px);
     aspect-ratio: 1;
@@ -505,7 +451,7 @@ a {
     min-width: 0;
     height: 100%;
     overflow: hidden;
-    background: white;
+    background: var(--foreground);
     border-radius: 12px;
 }
 
@@ -543,8 +489,6 @@ a {
         text-shadow: 0.7px 0 0 currentColor;
     }
 
-/* MUSICIAN */
-
 .musician {
     width: 100%;
     min-height: 100svh;
@@ -560,9 +504,6 @@ a {
         line-height: 0.9;
     }
 
-
-/* MUSIC PROJECT */
-
 .music-project {
     width: 100%;
     max-width: 1100px;
@@ -575,18 +516,12 @@ a {
     text-align: center;
 }
 
-
-/* MAIN LAYOUT */
-
 .music-project-main {
     display: grid;
     grid-template-columns: 1fr 0.8fr;
     gap: 5vw;
     align-items: center;
 }
-
-
-/* PROFILE AND DESCRIPTION */
 
 .music-project-about {
     display: flex;
@@ -628,11 +563,6 @@ a {
             margin-bottom: 0;
         }
 
-
-/* TRACK LIST */
-
-/* TRACK LIST */
-
 .music-project-tracks {
     display: flex;
     flex-direction: column;
@@ -666,9 +596,6 @@ a {
         text-shadow: 0.7px 0 0 currentColor;
     }
 
-
-/* SOCIAL LINKS */
-
 .music-project-links {
     display: flex;
     justify-content: center;
@@ -694,22 +621,14 @@ a {
             text-shadow: 0.7px 0 0 currentColor;
         }
 
-
-/* LARGE SCREEN */
-
 @media (min-width: 1250px) {
-    /* PROGRAMMER */
     .project-card {
         flex: 0 0 650px;
         height: 300px;
     }
 }
 
-
-/* MOBILE */
-
 @media (max-width: 700px) {
-
     .home {
         grid-template-columns: 1fr;
         align-content: center;
@@ -734,9 +653,6 @@ a {
         width: 100%;
     }
 
-
-    /* PROGRAMMER */
-
     .programmer {
         padding: 8vh 7vw;
     }
@@ -755,9 +671,6 @@ a {
         grid-template-columns: 1fr;
     }
 
-
-    /* VIDEO */
-
     .project-video {
         height: 160px;
         padding: 10px 20px;
@@ -772,16 +685,11 @@ a {
         height: auto;
     }
 
-
-    /* PROJECT INFO */
-
     .project-info {
         padding: 1rem;
         grid-template-rows: auto auto 1fr auto;
         font-size: clamp(0.7rem, 3vw, 0.8rem);
     }
-
-    /* BOTANIST */
 
     .botanist {
         padding: 8vh 7vw;
@@ -826,9 +734,6 @@ a {
         font-size: 2rem;
     }
 
-
-    /* PROFILE AND DESCRIPTION */
-
     .music-project-main {
         grid-template-columns: 1fr;
         gap: 2.5rem;
@@ -858,9 +763,6 @@ a {
         .music-project-description p {
             margin-bottom: 0.9rem;
         }
-
-
-    /* TRACKS IN A ROW */
 
     .music-project-tracks {
         display: grid;
@@ -892,14 +794,10 @@ a {
             text-align: center;
         }
 
-
-    /* SOCIAL LINKS */
-
     .music-project-links {
         flex-direction: column;
         gap: 0.8rem;
         margin-top: 2rem;
         font-size: 0.8rem;
     }
-
 }
