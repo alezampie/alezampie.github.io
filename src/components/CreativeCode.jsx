@@ -321,7 +321,7 @@ function CreativeCode() {
         }
 
         /*
-         * Il mosaico è stato completato.
+         * Il mosaico Ã¨ stato completato.
          */
 
         setMosaicReady(true)
