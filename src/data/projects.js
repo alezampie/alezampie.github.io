@@ -4,14 +4,14 @@ const projects = [
         description: 'Real-time audio plugin that compensates for graphic EQ band interaction to achieve a true-to-fader response, while enabling automatic tonal matching between a target and a reference signal.',
         technologies: ['C++', 'JUCE', 'DSP'],
         github: 'https://github.com/alezampie/Matching-Graphic-EQ-Plugin',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/0BSeiklCgy4'
     },
     {
         title: 'ECHOEDEN - WEB-APP',
         description: 'Full-stack peer-to-peer e-commerce platform connecting artists and fans, with role-based access, product and order management, dynamic cart, reviews, and AJAX interactions.',
         technologies: ['PHP', 'MySQL', 'JavaScript', 'AJAX', 'Bootstrap'],
         github: 'https://github.com/alezampie/EchoEden-Web-App',
-        video: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+        video: 'https://www.youtube.com/embed/KkXfZjA5Goc'
     },
     {
         title: 'MUSIC GENRE CLASSIFICATION',

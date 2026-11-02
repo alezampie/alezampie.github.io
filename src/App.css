@@ -543,6 +543,157 @@ a {
         text-shadow: 0.7px 0 0 currentColor;
     }
 
+/* MUSICIAN */
+
+.musician {
+    width: 100%;
+    min-height: 100svh;
+    padding: 10vh 5vw;
+    font-family: 'Basis33', monospace;
+}
+
+    .musician h2 {
+        margin: 0 0 8vh;
+        text-align: center;
+        font-family: 'Basis33', monospace;
+        font-size: clamp(3rem, 6vw, 7rem);
+        line-height: 0.9;
+    }
+
+
+/* MUSIC PROJECT */
+
+.music-project {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto 10vh;
+}
+
+.music-project-title {
+    margin: 0 0 3rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+    text-align: center;
+}
+
+
+/* MAIN LAYOUT */
+
+.music-project-main {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    gap: 5vw;
+    align-items: center;
+}
+
+
+/* PROFILE AND DESCRIPTION */
+
+.music-project-about {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.music-project-profile-container {
+    flex: 0 0 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.music-project-profile {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.music-project-description {
+    flex: 1;
+    min-width: 0;
+    font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+    line-height: 1.4;
+}
+
+    .music-project-description p {
+        margin: 0 0 1.2rem;
+        text-align: left;
+    }
+
+        .music-project-description p:last-child {
+            margin-bottom: 0;
+        }
+
+
+/* TRACK LIST */
+
+/* TRACK LIST */
+
+.music-project-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.music-track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+    .music-track img {
+        display: block;
+        flex: 0 0 100px;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .music-track span {
+        text-align: left;
+    }
+
+    .music-track:hover span {
+        text-shadow: 0.7px 0 0 currentColor;
+    }
+
+
+/* SOCIAL LINKS */
+
+.music-project-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+    .music-project-links a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+        .music-project-links a strong {
+            font-weight: normal;
+            text-shadow: 0.5px 0 currentColor, -0.5px 0 currentColor;
+        }
+
+        .music-project-links a:hover {
+            text-shadow: 0.7px 0 0 currentColor;
+        }
+
 
 /* LARGE SCREEN */
 
@@ -657,4 +808,98 @@ a {
         height: 280px;
         justify-self: center;
     }
+
+    .musician {
+        padding: 8vh 7vw;
+    }
+
+        .musician h2 {
+            margin-bottom: 6vh;
+        }
+
+    .music-project {
+        margin-bottom: 9vh;
+    }
+
+    .music-project-title {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+
+    /* PROFILE AND DESCRIPTION */
+
+    .music-project-main {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .music-project-about {
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .music-project-profile-container {
+        flex: 0 0 80px;
+        gap: 0.5rem;
+        font-size: 0.7rem;
+    }
+
+    .music-project-profile {
+        width: 80px;
+        height: 80px;
+    }
+
+    .music-project-description {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+
+        .music-project-description p {
+            margin-bottom: 0.9rem;
+        }
+
+
+    /* TRACKS IN A ROW */
+
+    .music-project-tracks {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.8rem;
+    }
+
+    .music-track {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+        gap: 0.7rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+        .music-track img {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1;
+            flex: none;
+            object-fit: cover;
+        }
+
+        .music-track span {
+            text-align: center;
+        }
+
+
+    /* SOCIAL LINKS */
+
+    .music-project-links {
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+
 }

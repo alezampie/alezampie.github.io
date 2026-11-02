@@ -7,6 +7,7 @@ import Programmer from './components/Programmer'
 import MousePet from './components/MousePet'
 import CreativeCode from './components/CreativeCode'
 import Botanist from './components/Botanist'
+import Musician from './components/Musician'
 
 
 function App() {
@@ -88,6 +89,10 @@ function App() {
 
             {selectedSection === 'BOTANIST' && (
                 <Botanist />
+            )}
+
+            {selectedSection === 'MUSICIAN' && (
+                <Musician />
             )}
 
             <MousePet />
